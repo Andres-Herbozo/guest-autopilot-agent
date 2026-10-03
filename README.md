@@ -53,7 +53,9 @@ Resultado: responde lo del estacionamiento directamente desde la ficha y registr
 
 **Caso 2 — error detectado en las pruebas**
 
-Pedro avisa que llegará a las 19:00 con su hijo. La primera versión del agente registró esa llegada en el Sheet como "Check-in anticipado". Era un error: el check-in es autónomo desde las 15:00, así que llegar a las 19:00 está dentro del horario y no requiere ninguna acción del anfitrión.
+> Hola, soy Pedro, llegamos mañana con mi hijo. ¿Podríamos hacer check-in a las 19? Y otra cosa, ¿dónde queda el estacionamiento?
+
+La primera versión del agente registró esa llegada en el Sheet como "Check-in anticipado". Era un error: el check-in es autónomo desde las 15:00, así que llegar a las 19:00 está dentro del horario y no requiere ninguna acción del anfitrión.
 
 **Corrección aplicada:**
 - En el System Prompt se agregó una regla explícita: solo es check-in anticipado si el huésped quiere entrar antes de las 15:00, y solo es check-out tardío si quiere salir después de las 11:00.
